@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherVine - Feel your day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="This weather app is fully customized as per the new and modern requirements.">
+</head>
+<body>
+    <main>
+        <!-- Sidebar navigation -->
+        <header>
+            <h1>Weather<span class="text-blue">Vine</span></h1>
+            <nav>
+                <div class="container active">
+                    <div class="link">
+                        <i class="fa-solid fa-grip nav-icon"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="link">
+                        <i class="fa-solid fa-wrench nav-icon"></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Search,Weather -->
+        <section id="dashboard">
+            <div class="search-container">
+                <i class="fa fa-search"></i>
+                <input type="text" name="city" id="city" placeholder="Search your city">
+            </div>
+            <div class="weather-result">
+                <div class="details">
+                    <div class="info">
+                        <h4 class="city">
+                            <i class="fa fa-location-dot"></i>
+                            <span>Vadodara</span>
+                        </h4>
+                        <p class="time">Today 1:04 AM</p>
+                    </div>
+                    <div class="weather">
+                        <p class="temp"> <span>14</span><sup>&deg;</sup> </p>
+                        <p>Mostly Clear</p>
+                    </div>
+                </div>
+                <div class="chart">
+                    <p>Temperature</p>
+                    <canvas id="myChart" style="width:100%;max-width:70rem;margin-top: 3rem;"></canvas>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="info wind-speed">
+                        <p>Wind Speed</p>
+                        <p>Total Wind Speed</p>
+                        <p>12Km/h</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-compass"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info humidity">
+                        <p>Humidity</p>
+                        <p>Total Humidity</p>
+                        <p>32%</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="settings">
+            <h1>Settings</h1>
+            <div class="theme">
+                Dark Theme
+                <input type="checkbox" name="theme" id="theme">
+                <label for="theme">
+                    <span class="circle"></span>
+                </label>
+            </div>
+        </section>
+        <!-- Sidebar Forecast -->
+        <aside>
+            <h1>This Week</h1>
+
+            <!-- Forcast is added by js -->
+        </aside>
+    </main>
+
+
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/02a12c1296.js" crossorigin="anonymous"></script>
+    
+    <!-- Chart JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <!-- Google Places API -->
+    <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRxABpzjw60ujfY34GrllVC5t211qwdI&libraries=places&callback=initMap"></script> -->
+
+
+    <script src="main.js"></script>
+</body>
+</html>
